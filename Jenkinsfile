@@ -31,6 +31,12 @@ pipeline {
                 }
             }    
         }
+
+        stage('TEST'){
+            steps {
+                sh 'mvn -s settings.xml test'
+            }
+        }
     }
 }
 
